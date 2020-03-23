@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "outDir": "./dist",
+        "jsx": "preserve",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "lib": ["DOM", "ES6", "DOM.Iterable", "ScriptHost"]
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+        "./lib"
+    ]
+}

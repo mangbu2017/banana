@@ -1,0 +1,21 @@
+{
+    "author": "JinBuhuan",
+    "name": "banana",
+    "version": "1.0.0",
+    "dependencies": {
+        "acorn": "^7.1.0",
+        "recast": "^0.18.5"
+    },
+    "devDependencies": {
+        "@types/node": "^12.12.17",
+        "acorn-jsx": "^5.1.0",
+        "chai": "^4.2.0",
+        "mocha": "^6.2.2",
+        "typescript": "^3.7.3"
+    },
+    "scripts": {
+        "tsc": "tsc --watch",
+        "start": "node ./dist/test.js",
+        "dev": "nodemon ./dist/test.js"
+    }
+}

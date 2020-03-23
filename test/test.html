@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const str =`
+const window = {
+    clickLog(params) {
+        return params;
+    }
+};
+export default ({ list }) => <template>
+        <h2 class="guess-title">猜你喜欢</h2>
+        <ul class="guess-recommend-list">
+        {list.map(item => <li class="guess-house" logr={item.logr}>
+                    <a href={item.jumpUrl} target="_blank" onclick={window.clickLog(item.clickLog)}>
+                        <div class="pic-wrap">
+                            {item.anxuan && <i class="anxuan"></i>}
+                            <img data-src={item.picUrl.indexOf('http') > -1 ? '//' + item.picUrl.split('//')[1] : item.picUrl}/>
+                            <div class="icons">
+                                {item.shipin && <i class="videoIcon"></i>}
+                                {item.quanjing && <i class="VRIcon"></i>}
+                            </div>
+                        </div>
+                        <div class="detail-info">
+                            <h3>{item.addr}</h3>
+                            <div class="house-type">
+                                {item.subRegion && item.subRegion}
+                                {item.region}&nbsp;&nbsp;{item.objectType}
+                            </div>
+                            <div class="price">
+                                <span class="jiage">{item.firstPrice}</span>
+                                <span class="danwei">{item.firstPriceUnit}</span>
+                                <span class="area">{item.area}</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>)}
+        </ul>
+    </template>;
+`;
+
+        const reg = /<template>[\d\D]*<\/template>/g;
+
+        console.log(reg.exec(str));
+
+
+    </script>
+</body>
+</html>
