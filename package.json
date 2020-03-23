@@ -3,7 +3,7 @@
     "name": "banana",
     "version": "1.0.0",
     "dependencies": {
-        "acorn": "^7.1.0",
+        "acorn": "^7.1.1",
         "recast": "^0.18.5"
     },
     "devDependencies": {
