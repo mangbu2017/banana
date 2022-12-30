@@ -10,7 +10,7 @@
         "@types/node": "^12.12.17",
         "acorn-jsx": "^5.1.0",
         "chai": "^4.2.0",
-        "mocha": "^6.2.2",
+        "mocha": "^10.2.0",
         "typescript": "^3.7.3"
     },
     "scripts": {
